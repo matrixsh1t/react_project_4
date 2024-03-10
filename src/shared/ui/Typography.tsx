@@ -27,7 +27,7 @@ const STYLE_ALIGN = {
   right: "text-right"
 }
 
-interface Props extends HTMLAttributes<HTMLParagraphElement> {
+interface Props extends HTMLAttributes<HTMLDivElement> {
   size?: TEXT_SIZE;
   weight?: TEXT_WEIGHT;
   color?: string;
@@ -45,12 +45,12 @@ export const Typography: FC<Props> = function Typography(props) {
 
   return (
     <>
-      <p
+      <div
         {...rest}
         className={`${STYLE_SIZE[size]} ${STYLE_WEIGHT[weight]} ${STYLE_ALIGN[align]} ${color} ${props.className}`}
       >
         {props.children}
-      </p>
+      </div>
     </>
   );
 };
