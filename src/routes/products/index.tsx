@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Products } from "../../pages/products/model/Products";
+import { Products } from "../../pages/products/Products";
 
 export type TProductQuery = {
     from?: number,

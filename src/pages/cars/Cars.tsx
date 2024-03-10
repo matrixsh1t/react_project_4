@@ -1,10 +1,11 @@
 import { FC } from "react";
-import { TCarQuery } from "../../../routes/cars";
-import { carArray } from "../cars";
-import { Card } from "../../../components/Card";
-import { Typography } from "../../../shared/ui/Typography";
+import { TCarQuery } from "../../routes/cars";
+import { carArray } from "./model/cars";
+import { Card } from "../../components/Card";
+import { Typography } from "../../shared/ui/Typography";
 import { Link } from "@tanstack/react-router";
-import { Button } from "../../../shared/ui/Button";
+import { Button } from "../../shared/ui/Button";
+import { CarDetailCard } from "../../components/CarDetailCard";
 
 export const Cars: FC<TCarQuery> = function Cars(props) {
   const carList = carArray
@@ -33,10 +34,12 @@ export const Cars: FC<TCarQuery> = function Cars(props) {
         </Card>
       </li>
     ));
-    
+
   return (
     <>
-      <ul>{carList}</ul>
+      <ul>
+        {carList.length ? carList : <Typography>{"Машина не найдена"}</Typography>}
+      </ul>
     </>
   );
 };

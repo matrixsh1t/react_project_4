@@ -1,7 +1,7 @@
 // import { useParams } from "@tanstack/react-router";
 import { FC } from "react";
-import { products } from "../Product";
-import { Typography } from "../../../shared/ui/Typography";
+import { products } from "./model/Product";
+import { Typography } from "../../shared/ui/Typography";
 
 // ---BAD CODE---
 // export const Product: FC = function Product() {

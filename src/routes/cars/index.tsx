@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router"
-import { Cars } from "../../pages/cars/model/Cars"
+import { Cars } from "../../pages/cars/Cars"
 
 export type TCarQuery = {
     color?: string,

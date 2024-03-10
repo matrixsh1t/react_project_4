@@ -1,6 +1,6 @@
 export interface IProductModel {
     id: number,
-    name: string
+    name: string,
     price: number
 }
 
